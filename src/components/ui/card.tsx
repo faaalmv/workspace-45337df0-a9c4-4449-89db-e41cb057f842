@@ -6,8 +6,10 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card"
+      // Aplicamos glassmorphism y transiciones para hover
       className={cn(
         "glassmorphism text-card-foreground flex flex-col gap-6 rounded-xl py-6 shadow-lg",
+        "hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 ease-in-out", // Efecto de escala al pasar el mouse
         className
       )}
       {...props}

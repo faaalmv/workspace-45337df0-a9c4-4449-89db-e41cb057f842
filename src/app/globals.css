@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+@import "tw-animate-css"; /* Asegúrate de que esta librería esté correctamente instalada y configurada si la usas */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -121,14 +121,58 @@
   }
 }
 
+/* Modificación de la clase glassmorphism */
 .glassmorphism {
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.15); /* Un poco menos opaco */
+  backdrop-filter: blur(12px); /* Ligeramente más borroso */
+  -webkit-backdrop-filter: blur(12px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* Borde más sutil */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  transition: all 0.3s ease-in-out; /* Transición para efectos de hover */
 }
 
 .dark .glassmorphism {
-  background-color: rgba(30, 30, 30, 0.2);
+  background-color: rgba(30, 30, 30, 0.15); /* Menos opaco en dark mode */
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Clases de animación básicas para el hover */
+.glassmorphism:hover {
+  transform: translateY(-5px); /* Pequeño levantamiento */
+  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Animación de entrada para los elementos clave */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
