@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { Navbar } from "@/components/layout/navbar"; // Asegúrate de importar la Navbar
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,11 +42,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning style={{ scrollBehavior: 'smooth' }}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <Navbar /> {/* Renderiza la Navbar aquí */}
+        <main>{children}</main> {/* Envuelve el contenido principal en un <main> */}
         <Toaster />
       </body>
     </html>
