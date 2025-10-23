@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16 text-center">
           {/* Logo Section */}
           <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl shadow-2xl p-6">
+            <div className="inline-flex items-center justify-center w-32 h-32 md:w-40 md:h-40 glassmorphism rounded-2xl shadow-2xl p-6">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">YE</div>
                 <div className="text-sm md:text-base text-white/90 font-bold">ODONTOLOGÍA</div>
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-white/20 backdrop-blur-sm text-white px-6 py-3 border border-white/30 text-sm font-medium">
+            <Badge className="mb-6 glassmorphism text-white px-6 py-3 text-sm font-medium">
               <Sparkles className="w-4 h-4 mr-2" />
               Excelencia en Odontología Integral
             </Badge>
@@ -87,7 +87,7 @@ export default function Home() {
       {/* Features Cards */}
       <section className="container mx-auto px-4 -mt-20 relative z-20 mb-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
+          <Card className="hover:shadow-2xl transition-all duration-300">
             <CardContent className="p-6 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
@@ -98,7 +98,7 @@ export default function Home() {
             </CardContent>
           </Card>
           
-          <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
+          <Card className="hover:shadow-2xl transition-all duration-300">
             <CardContent className="p-6 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
@@ -109,7 +109,7 @@ export default function Home() {
             </CardContent>
           </Card>
           
-          <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
+          <Card className="hover:shadow-2xl transition-all duration-300">
             <CardContent className="p-6 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-white" />
@@ -140,7 +140,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
+            <Card className="hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Star className="w-10 h-10 text-white" />
@@ -150,7 +150,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
+            <Card className="hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Heart className="w-10 h-10 text-white" />
@@ -160,7 +160,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
+            <Card className="hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-10 h-10 text-white" />
@@ -224,7 +224,7 @@ export default function Home() {
       {/* Final CTA */}
       <section id="contacto" className="py-20 bg-gradient-to-br from-purple-600 via-rose-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-6 bg-white/20 backdrop-blur-sm text-white px-6 py-3 border border-white/30">
+          <Badge className="mb-6 glassmorphism text-white px-6 py-3">
             <Sparkles className="w-4 h-4 mr-2" />
             Tu Sonrisa Perfecta te Espera
           </Badge>
