@@ -20,6 +20,11 @@ const nextConfig: NextConfig = {
     // 构建时忽略ESLint错误
     ignoreDuringBuilds: true,
   },
+  // INICIO DE MODIFICACIÓN: Añadido para solucionar la advertencia
+  experimental: {
+    allowedDevOrigins: ["http://127.0.0.1:3000"],
+  },
+  // FIN DE MODIFICACIÓN
 };
 
 export default nextConfig;

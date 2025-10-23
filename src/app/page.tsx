@@ -35,7 +35,7 @@ import {
   Zap,
   CheckCircle2,
   Quote,
-  HeartPulse
+  HeartPulse // Corregido: 'Tooth' no existe, 'HeartPulse' es una mejor alternativa
 } from 'lucide-react';
 
 // --- Datos de ejemplo (puedes reemplazarlos con los tuyos) ---
@@ -88,7 +88,7 @@ export default function Home() {
   const whatsappNumber = "3313112353"
   const whatsappMessage = "Hola, me gustaría agendar una cita en YE Odontología Integral"
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
-  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Volcán+Zacapu+286+Huentitán+el+Bajo";
+  const googleMapsUrl = "https://www.google.com/maps/place/Volc%C3%A1n+Zacapu+286,+Huentit%C3%A1n+El+Bajo,+44250+Guadalajara,+Jal./@20.728033,-103.308552,17z/data=!3m1!4b1!4m6!3m5!1s0x8428b1e779a8107b:0x538a21355550a22!8m2!3d20.728033!4d-103.3059771!16s%2Fg%2F11cs7c_q0c?entry=ttu";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -361,8 +361,7 @@ export default function Home() {
           </Carousel>
         </div>
       </section>
-
-      {/* --- NUEVA SECCIÓN: UBICACIÓN Y MAPA --- */}
+      
       <section id="ubicacion" className="py-20 md:py-24 bg-white/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 scroll-animate opacity-0">
@@ -377,7 +376,7 @@ export default function Home() {
             <div className="scroll-animate opacity-0">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.148356942186!2d-103.31011162483866!3d20.70425788081624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1a231d6851b%3A0x1c378954716768a3!2sVolc%C3%A1n%20Zacapu%20286%2C%20Huentit%C3%A1n%20El%20Bajo%2C%2044250%20Guadalajara%2C%20Jal.!5e0!3m2!1sen!2smx!4v1678886400000!5m2!1sen!2smx"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.554289388836!2d-103.308552084534!3d20.72803300216127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1e779a8107b%3A0x538a21355550a22!2sVolc%C3%A1n%20Zacapu%20286%2C%20Huentit%C3%A1n%20El%20Bajo%2C%2044250%20Guadalajara%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1678886400000!5m2!1ses-419!2smx"
                   width="100%"
                   height="450"
                   style={{ border: 0 }}
