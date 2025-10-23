@@ -426,7 +426,7 @@ export default function Home() {
       <footer className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="animate-on-load">
+            <div className="animate-fade-in-up">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-rose-600 rounded-full flex items-center justify-center shadow-lg">
                   <Heart className="w-6 h-6 text-white" />
@@ -439,7 +439,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="animate-on-load">
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <h4 className="text-lg font-semibold mb-4">Contacto Rápido</h4>
               <div className="space-y-3 text-gray-400 text-sm">
                 <p className="flex items-center hover:text-white transition-colors">
@@ -457,7 +457,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="animate-on-load">
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <h4 className="text-lg font-semibold mb-4">Horario de Atención</h4>
               <div className="space-y-2 text-gray-400 text-sm">
                 <p className="flex justify-between">
