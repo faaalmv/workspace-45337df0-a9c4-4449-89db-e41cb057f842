@@ -35,7 +35,7 @@ import {
   Zap,
   CheckCircle2,
   Quote,
-  HeartPulse // Corregido: 'Tooth' no existe, 'HeartPulse' es una mejor alternativa
+  HeartPulse
 } from 'lucide-react';
 
 // --- Datos de ejemplo (puedes reemplazarlos con los tuyos) ---
@@ -88,6 +88,7 @@ export default function Home() {
   const whatsappNumber = "3313112353"
   const whatsappMessage = "Hola, me gustaría agendar una cita en YE Odontología Integral"
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Volcán+Zacapu+286+Huentitán+el+Bajo";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -334,7 +335,7 @@ export default function Home() {
           </div>
           <Carousel
             opts={{ align: "start", loop: true }}
-            className="w-full max-w-4xl mx-auto"
+            className="w-full max-w-4xl mx-auto scroll-animate opacity-0"
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
@@ -358,6 +359,48 @@ export default function Home() {
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
           </Carousel>
+        </div>
+      </section>
+
+      {/* --- NUEVA SECCIÓN: UBICACIÓN Y MAPA --- */}
+      <section id="ubicacion" className="py-20 md:py-24 bg-white/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 scroll-animate opacity-0">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
+                  Encuéntranos Fácilmente
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Estamos ubicados en el corazón de Huentitán el Bajo, listos para recibirte.
+              </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            <div className="scroll-animate opacity-0">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.148356942186!2d-103.31011162483866!3d20.70425788081624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1a231d6851b%3A0x1c378954716768a3!2sVolc%C3%A1n%20Zacapu%20286%2C%20Huentit%C3%A1n%20El%20Bajo%2C%2044250%20Guadalajara%2C%20Jal.!5e0!3m2!1sen!2smx!4v1678886400000!5m2!1sen!2smx"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div className="scroll-animate opacity-0" style={{ animationDelay: '0.2s' }}>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Dirección</h3>
+                <p className="text-lg text-gray-700 mb-2">Volcán Zacapu #286, Huentitán el Bajo</p>
+                <p className="text-lg text-gray-700 mb-6">Guadalajara, Jalisco, C.P. 44250</p>
+                <Button
+                  size="lg"
+                  className="bg-purple-600 hover:bg-purple-700 text-white shadow-lg transform hover:scale-105 transition-transform"
+                  onClick={() => window.open(googleMapsUrl, '_blank')}
+                >
+                  <MapPin className="w-5 h-5 mr-2" />
+                  Abrir en Google Maps
+                </Button>
+            </div>
+          </div>
         </div>
       </section>
 

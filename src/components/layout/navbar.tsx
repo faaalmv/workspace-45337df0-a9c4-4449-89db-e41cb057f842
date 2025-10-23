@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Phone, Sparkles } from 'lucide-react';
+import { MessageCircle, Phone, Sparkles, MapPin } from 'lucide-react'; // Importar MapPin
 import { cn } from '@/lib/utils';
 
 export function Navbar() {
@@ -45,6 +45,7 @@ export function Navbar() {
           <a onClick={() => scrollToSection('servicios')} className="cursor-pointer hover:text-rose-200 transition-colors">Servicios</a>
           <a onClick={() => scrollToSection('doctora')} className="cursor-pointer hover:text-rose-200 transition-colors">La Doctora</a>
           <a onClick={() => scrollToSection('testimonios')} className="cursor-pointer hover:text-rose-200 transition-colors">Testimonios</a>
+          <a onClick={() => scrollToSection('ubicacion')} className="cursor-pointer hover:text-rose-200 transition-colors">Ubicación</a> {/* NUEVO ENLACE */}
           <a onClick={() => scrollToSection('faq')} className="cursor-pointer hover:text-rose-200 transition-colors">FAQ</a>
         </nav>
         <div className="flex items-center gap-2">
